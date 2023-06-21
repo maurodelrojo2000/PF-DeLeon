@@ -1,0 +1,219 @@
+@import "coloresUwU";
+@mixin fotos{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+*{margin: 0%;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0%;
+    padding: 0%;
+    background-image:url(../media/pesas-gimnasio_144627-38759.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+}
+.logo{
+    display: flex;
+    rotate: 1;
+}
+.logo img{
+        height: 130px;
+}
+    /* barra de busqueda */
+.barra-busqueda{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;  
+    align-items: center;
+    margin-left: -30px;    
+}
+.input-busqueda{
+    width: 220px; 
+    height: 40px;
+    padding: 0 20px;
+    margin-left: 30px;
+    border-radius: 35px;
+}
+    /*menu*/
+.menu{ 
+    ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 0%;
+    padding: 0;
+        li{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-top: 25px;
+            list-style: none;
+            background-color: $colorazul;
+                a{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    list-style: none;   
+                    color: white;
+                    text-decoration: none;
+                    display: block;
+                    padding: 10px 40px;
+                    &:hover{
+                        background-color: $colorfueguitofachero;
+                    }
+                    
+            }    
+           }
+    }
+}
+    .grid-catalogo{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr)) ;
+    grid-auto-rows: minmax(200px,auto);
+    gap: 120px;
+    padding: 20px;
+        .grid-venta{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+                .productos{
+                    @include fotos;
+                    transition: 0.5s;
+                    object-fit: cover;
+                &:hover{
+                    transform: scale(1.2);
+                }    
+            }
+    }
+}
+
+    /* footer general de las demas pages*/
+.footer{
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        text-decoration: none;
+        list-style: none;
+        background-color: $colorazul;
+        padding: 0%;
+        margin: 0%;
+            li{
+                text-decoration: none;
+                list-style: none;
+                background-color: $colorazul;
+                    a{
+                        text-decoration: none;
+                        list-style: none;
+                        color: white;
+                        padding: 3px 3px;
+                        &:hover{
+                            background-color: $colorfueguitofachero;
+                        }
+
+                    }
+            }
+    }
+}
+.footerfachero{  
+    padding: 0%;
+}
+    /* Formularios */
+    .contenedorregistro{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding-bottom: 400px;
+            .registro1{
+                align-items: center;    
+                display: flex;
+                flex-wrap: nowrap;
+                text-align: center;
+                height: 200px;
+                width: 400px;
+                background: #150e38;
+                padding: 100px;
+                border-top: solid 5px red ;
+                border-right: solid 5px red ;
+                border-bottom: solid 5px red;
+                border-left: solid 5px red
+                    h3{
+                        color: white;
+                    }
+                    .registro2 {
+                        text-align: center;
+                        width: 100%;
+                        background-color: white ;
+                        padding: 10px;
+                        border-radius: 10px;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        color: chocolate;
+                        text-align: center;
+                        text-decoration: none;
+                        }
+            }
+        }
+    .quienessomos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .titulos{
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                flex-direction: column;
+                color: white;
+                margin: 25px; 
+                padding: 3px ;
+                background-color: $colorazul;
+                border: 3px solid red;
+                width: 200px;
+                height: 40px;
+}               .descripcion {  
+                    justify-content: center;
+                    margin-bottom: 4px ;
+                    padding: 35px;
+                    background-color: #150e38;
+                    color: white;
+                    border-top: solid 3px red ;
+                    border-right: solid 3px red ;
+                    border-bottom: solid 3px red ;
+                    border-left: solid 3px red ;
+}
+    }
+@media screen and (max-width:768px){
+    .barra-busqueda{
+        display: none;
+    }
+    .menu ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer{
+        text-align: center;
+    }
+        
+    }
