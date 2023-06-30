@@ -150,8 +150,10 @@ header {
   border-top: solid 5px red;
   border-right: solid 5px red;
   border-bottom: solid 5px red;
-  border-left: solid 5px red h3;
-  border-left-color: white;
+  border-left: solid 5px red;
+}
+.contenedorregistro .registro1 h3 {
+  color: white;
 }
 .contenedorregistro .registro1 .registro2 {
   text-align: center;
@@ -165,6 +167,23 @@ header {
   color: chocolate;
   text-align: center;
   text-decoration: none;
+}
+.contenedorregistro .registro1 .botones, .contenedorregistro .registro1 .boton--cancelar {
+  background-color: blue;
+  cursor: pointer;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
+}
+.contenedorregistro .registro1 .botones:hover, .contenedorregistro .registro1 .boton--cancelar:hover {
+  background-color: green;
+}
+.contenedorregistro .registro1 .boton--cancelar:hover {
+  background-color: red;
 }
 
 .quienessomos {

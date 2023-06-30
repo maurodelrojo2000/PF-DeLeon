@@ -6,6 +6,8 @@
 
 
 
+
+
 *{margin: 0%;
 padding: 0;
 font-family: 'Roboto', sans-serif;
@@ -141,36 +143,59 @@ header{
         height: 100%;
         padding-bottom: 400px;
             .registro1{
-                align-items: center;    
-                display: flex;
-                flex-wrap: nowrap;
+            align-items: center;
+            display: flex;
+            flex-wrap: nowrap;
+            text-align: center;
+            height: 200px;
+            width: 400px;
+            background: #150e38;
+            padding: 100px;
+            border-top: solid 5px red ;
+            border-right: solid 5px red ;
+            border-bottom: solid 5px red;
+            border-left: solid 5px red;
+                h3{
+                color: white;
+                }
+    
+                .registro2 {
                 text-align: center;
-                height: 200px;
-                width: 400px;
-                background: #150e38;
-                padding: 100px;
-                border-top: solid 5px red ;
-                border-right: solid 5px red ;
-                border-bottom: solid 5px red;
-                border-left: solid 5px red
-                    h3{
-                        color: white;
+                width: 100%;
+                background-color: white ;
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                }
+                p {
+                    color: chocolate;
+                    text-align: center;
+                    text-decoration: none;
                     }
-                    .registro2 {
-                        text-align: center;
-                        width: 100%;
-                        background-color: white ;
-                        padding: 10px;
-                        border-radius: 10px;
-                        margin-bottom: 10px;
+                .botones{
+                background-color: blue;
+                cursor: pointer;
+                border: none;
+                padding: 15px;
+                color: white;
+                font-size: 10px;
+                font-weight: bold;
+                position: relative;
+                border-radius: 12px;
+                    &:hover{
+                    background-color: green;
                     }
-                    p {
-                        color: chocolate;
-                        text-align: center;
-                        text-decoration: none;
-                        }
-            }
+                }
+                .boton--cancelar{
+                    @extend .botones;
+                    &:hover{
+                    background-color: red;
+                    }
+                 }
+        
         }
+       
+    }
     .quienessomos{
             display: flex;
             flex-direction: column;
